@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KIKUCHI Toru — 会計・バックオフィスの"面倒"をAIと自動化で実装まで</title>
+  <meta name="description" content="会計・バックオフィスの面倒を、AIと自動化で実装まで片付けるエンジニア。業務を理解し、自動化・AIで実装し、成果まで。" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- ===== ヘッダ ===== -->
+  <header class="site-header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top">KIKUCHI&nbsp;Toru</a>
+      <nav class="nav" id="nav">
+        <a href="#works">実績</a>
+        <a href="#stack">技術</a>
+        <a href="#about">プロフィール</a>
+        <a href="#contact">連絡</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="メニュー" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== ① ヒーロー ===== -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">
+          会計・バックオフィスの&ldquo;面倒&rdquo;を、<br />
+          AIと自動化で&ldquo;実装まで&rdquo;片付けるエンジニア
+        </h1>
+        <p class="hero__sub">業務を理解 → 自動化・AIで実装 → 成果まで。の3点セットで動けます。</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#works">実績を見る</a>
+          <a class="btn btn--ghost" href="#contact">相談する</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ② こんな"面倒"を解決します ===== -->
+    <section class="section pains">
+      <div class="container">
+        <h2 class="section__title">こんな作業、まだ手でやっていませんか？</h2>
+        <ul class="cards cards--3">
+          <!-- TODO: 実案件でよくある「面倒」に差し替え -->
+          <li class="pain-card"><h3>手作業の集計・転記</h3><p>Excelへの転記やコピペ作業を繰り返している</p></li>
+          <li class="pain-card"><h3>定型レポート作成</h3><p>毎月同じ資料を手で作り直している</p></li>
+          <li class="pain-card"><h3>会計・経理の繰り返し</h3><p>仕訳や計算の定型処理に時間を取られている</p></li>
+        </ul>
+        <p class="pains__lead">→ こうした&ldquo;面倒&rdquo;を、AIと自動化で<strong>「実装まで」</strong>やります。</p>
+      </div>
+    </section>
+
+    <!-- ===== ③ 3つの強み ===== -->
+    <section class="section strengths">
+      <div class="container">
+        <h2 class="section__title">3つの強みの&ldquo;重なり&rdquo;が特徴です</h2>
+        <ul class="cards cards--3">
+          <li class="strength-card">
+            <span class="strength-card__no">01</span>
+            <h3>業務ドメインの理解</h3>
+            <p>会計・財務・バックオフィスの実務を理解した上で設計します。</p>
+          </li>
+          <li class="strength-card">
+            <span class="strength-card__no">02</span>
+            <h3>自動化・RPAの実装力</h3>
+            <p>GAS / VBA / スクリプトで地に足のついた効率化を実装します。</p>
+          </li>
+          <li class="strength-card">
+            <span class="strength-card__no">03</span>
+            <h3>AI・LLMを実務に組み込む力</h3>
+            <p>ローカル完結のLLMツールやエージェントを業務に組み込みます。</p>
+          </li>
+        </ul>
+        <p class="strengths__lead">この3つが重なるから、<strong>現場を理解して実装まで持っていけます。</strong></p>
+      </div>
+    </section>
+
+    <!-- ===== ④ 制作実績（JSON駆動） ===== -->
+    <section class="section works" id="works">
+      <div class="container">
+        <h2 class="section__title">制作実績</h2>
+        <p class="section__lead">「課題 → 対応 → 成果」で、何を解決できるかをお見せします。</p>
+        <ul class="cards cards--3" id="worksList">
+          <!-- assets/js/works.js が data/works.json から生成 -->
+          <li class="works-card works-card--loading">読み込み中…</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== ⑤ 技術スタック ===== -->
+    <section class="section stack" id="stack">
+      <div class="container">
+        <h2 class="section__title">技術スタック</h2>
+        <dl class="stack-list">
+          <div class="stack-row"><dt>言語</dt><dd>Python / JavaScript / GAS / VBA</dd></div>
+          <div class="stack-row"><dt>AI・LLM</dt><dd>ローカル完結LLM / エージェント / API連携</dd></div>
+          <div class="stack-row"><dt>自動化</dt><dd>RPA / スクリプト / スプレッドシート連携</dd></div>
+          <div class="stack-row"><dt>その他</dt><dd>Git / HTML・CSS / GitHub Pages</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== ⑥ 依頼の流れ ===== -->
+    <section class="section flow">
+      <div class="container">
+        <h2 class="section__title">依頼の流れ</h2>
+        <ol class="flow-steps">
+          <li>相談</li><li>課題ヒアリング</li><li>試作</li><li>実装</li><li>納品</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== ⑦ note ===== -->
+    <section class="section note">
+      <div class="container">
+        <h2 class="section__title">考え方を発信しています</h2>
+        <!-- TODO: noteのURLに差し替え -->
+        <a class="btn btn--ghost" href="#" data-todo="note-url">noteを読む</a>
+      </div>
+    </section>
+
+    <!-- ===== ⑧ プロフィール ===== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="section__title">プロフィール</h2>
+        <!-- TODO: 守秘・個人情報に触れない範囲で記入 -->
+        <p class="about__text">
+          会計・バックオフィス領域の業務を理解し、自動化とAIで「実装まで」を担うエンジニアです。
+          現場の&ldquo;面倒&rdquo;を、手を動かして成果につなげることを得意としています。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== ⑨ 連絡導線（フッタ） ===== -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <h2 class="footer__title">お問い合わせは各SNSから</h2>
+      <ul class="contacts">
+        <!-- TODO: 各URLに差し替え -->
+        <li><a href="#" data-todo="x-url">X (Twitter)</a></li>
+        <li><a href="https://github.com/ChRo05">GitHub</a></li>
+        <li><a href="#" data-todo="note-url">note</a></li>
+      </ul>
+      <p class="copyright">&copy; KIKUCHI Toru</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/works.js" defer></script>
+</body>
+</html>

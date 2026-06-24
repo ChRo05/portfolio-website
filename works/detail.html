@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>制作実績 — KIKUCHI Toru</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="brand" href="../index.html">KIKUCHI&nbsp;Toru</a>
+      <nav class="nav">
+        <a href="../index.html#works">実績</a>
+        <a href="../index.html#contact">連絡</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="detail" style="padding-top:48px; padding-bottom:72px; max-width:800px;">
+    <p><a href="../index.html#works">← 実績一覧へ戻る</a></p>
+    <div id="detailBody"><p>読み込み中…</p></div>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <h2 class="footer__title">お問い合わせは各SNSから</h2>
+      <ul class="contacts">
+        <li><a href="#" data-todo="x-url">X (Twitter)</a></li>
+        <li><a href="https://github.com/ChRo05">GitHub</a></li>
+        <li><a href="#" data-todo="note-url">note</a></li>
+      </ul>
+      <p class="copyright">&copy; KIKUCHI Toru</p>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    const body = document.getElementById("detailBody");
+    const id = new URLSearchParams(location.search).get("id");
+
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+
+    if (!id) { body.innerHTML = "<p>実績が指定されていません。</p>"; return; }
+
+    fetch("../data/works.json")
+      .then(function (r) { return r.json(); })
+      .then(function (works) {
+        const w = works.find(function (x) { return x.id === id; });
+        if (!w) { body.innerHTML = "<p>該当する実績が見つかりませんでした。</p>"; return; }
+        document.title = w.title + " — KIKUCHI Toru";
+
+        const badgeLabel = w.badge === "公開コード" ? "公開コード" : "成果のみ";
+        const tags = (w.tags || []).map(function (t) { return esc(t); }).join(" / ");
+
+        const links = [];
+        if (w.links && w.links.repo) links.push('<a href="' + esc(w.links.repo) + '">コードを見る</a>');
+        if (w.links && w.links.demo) links.push('<a href="' + esc(w.links.demo) + '">デモを見る</a>');
+        if (w.links && w.links.note) links.push('<a href="' + esc(w.links.note) + '">note記事</a>');
+
+        body.innerHTML =
+          '<span class="badge ' + (w.badge === "公開コード" ? "badge--code" : "badge--result") + '">' + esc(badgeLabel) + "</span>" +
+          "<h1 style='margin:12px 0;'>" + esc(w.title) + "</h1>" +
+          "<p style='color:var(--color-muted);'>" + esc(tags) + "</p>" +
+          (w.thumb ? '<img src="../' + esc(w.thumb) + '" alt="" style="width:100%;border-radius:12px;margin:16px 0;" />' : "") +
+          "<h2 class='section__title' style='margin-top:32px;'>課題</h2><p>" + esc(w.problem) + "</p>" +
+          "<h2 class='section__title' style='margin-top:24px;'>対応</h2><p>" + esc(w.action) + "</p>" +
+          "<h2 class='section__title' style='margin-top:24px;'>成果</h2><p>" + esc(w.result) + "</p>" +
+          (links.length ? "<p style='margin-top:24px;'>" + links.join(" ｜ ") + "</p>" : "");
+      })
+      .catch(function () { body.innerHTML = "<p>読み込みに失敗しました。</p>"; });
+  })();
+  </script>
+</body>
+</html>

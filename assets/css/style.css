@@ -1,0 +1,141 @@
+/* =========================================================
+   ポートフォリオ スタイル土台 v0.1
+   トーン: 誠実・堅実・ミニマル（後で調整可）
+   ========================================================= */
+
+:root {
+  --color-bg: #ffffff;
+  --color-fg: #1a1d21;
+  --color-muted: #5b6470;
+  --color-line: #e3e7ec;
+  --color-soft: #f5f7fa;
+  --color-accent: #0b6cf0;
+  --color-accent-dark: #084fb0;
+  --maxw: 1040px;
+  --radius: 12px;
+  --space: 24px;
+  --font: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP",
+    "Yu Gothic", Meiryo, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--color-fg);
+  background: var(--color-bg);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+a { color: var(--color-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3 { line-height: 1.4; margin: 0; }
+
+/* ===== ヘッダ ===== */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-line);
+}
+.header__inner { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.brand { font-weight: 700; color: var(--color-fg); }
+.brand:hover { text-decoration: none; }
+.nav { display: flex; gap: 24px; }
+.nav a { color: var(--color-fg); font-size: 0.95rem; }
+.nav-toggle { display: none; background: none; border: 0; font-size: 1.4rem; cursor: pointer; }
+
+/* ===== ボタン ===== */
+.btn {
+  display: inline-block; padding: 12px 24px; border-radius: 999px;
+  font-weight: 600; font-size: 0.98rem; transition: transform .08s ease, background .2s ease;
+}
+.btn:hover { text-decoration: none; transform: translateY(-1px); }
+.btn--primary { background: var(--color-accent); color: #fff; }
+.btn--primary:hover { background: var(--color-accent-dark); }
+.btn--ghost { background: #fff; color: var(--color-accent); border: 1px solid var(--color-accent); }
+.btn--ghost:hover { background: var(--color-soft); }
+
+/* ===== ヒーロー ===== */
+.hero { padding: 96px 0 80px; background: linear-gradient(180deg, var(--color-soft), #fff); }
+.hero__title { font-size: clamp(1.6rem, 4.2vw, 2.6rem); font-weight: 800; letter-spacing: .01em; }
+.hero__sub { color: var(--color-muted); font-size: 1.05rem; margin: 20px 0 32px; }
+.hero__cta { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ===== セクション共通 ===== */
+.section { padding: 72px 0; border-top: 1px solid var(--color-line); }
+.section__title { font-size: clamp(1.3rem, 3vw, 1.7rem); font-weight: 700; margin-bottom: 8px; }
+.section__lead { color: var(--color-muted); margin: 0 0 32px; }
+
+/* ===== カードグリッド ===== */
+.cards { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 20px; }
+.cards--3 { grid-template-columns: repeat(3, 1fr); }
+
+.pain-card, .strength-card, .works-card {
+  background: var(--color-soft); border: 1px solid var(--color-line);
+  border-radius: var(--radius); padding: 24px;
+}
+.pain-card h3, .strength-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.pain-card p, .strength-card p { color: var(--color-muted); font-size: 0.95rem; margin: 0; }
+.pains__lead, .strengths__lead { margin-top: 28px; font-size: 1.1rem; }
+
+.strength-card__no { display: block; font-size: 0.85rem; font-weight: 700; color: var(--color-accent); margin-bottom: 6px; }
+
+/* ===== 実績カード ===== */
+.works-card { display: flex; flex-direction: column; padding: 0; overflow: hidden; }
+.works-card--loading { padding: 24px; color: var(--color-muted); background: #fff; }
+.works-card__thumb { aspect-ratio: 16 / 9; background: #dce2ea; object-fit: cover; width: 100%; }
+.works-card__body { padding: 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.works-card__title { font-size: 1.05rem; }
+.works-card__summary { color: var(--color-muted); font-size: 0.92rem; margin: 0; flex: 1; }
+.badge {
+  align-self: flex-start; font-size: 0.74rem; font-weight: 700; padding: 4px 10px;
+  border-radius: 999px;
+}
+.badge--code { background: #e3f0ff; color: var(--color-accent-dark); }
+.badge--result { background: #eef0f3; color: var(--color-muted); }
+.works-card__more { font-size: 0.9rem; font-weight: 600; margin-top: 4px; }
+
+/* ===== 技術スタック ===== */
+.stack-list { margin: 28px 0 0; }
+.stack-row { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--color-line); }
+.stack-row dt { font-weight: 700; }
+.stack-row dd { margin: 0; color: var(--color-muted); }
+
+/* ===== 依頼の流れ ===== */
+.flow-steps { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; gap: 12px; counter-reset: step; }
+.flow-steps li {
+  position: relative; background: var(--color-soft); border: 1px solid var(--color-line);
+  border-radius: 999px; padding: 10px 20px; font-weight: 600;
+}
+.flow-steps li::before { counter-increment: step; content: counter(step) ". "; color: var(--color-accent); }
+
+/* ===== about ===== */
+.about__text { color: var(--color-muted); max-width: 720px; }
+
+/* ===== フッタ ===== */
+.site-footer { background: var(--color-fg); color: #fff; padding: 56px 0 32px; }
+.footer__title { font-size: 1.2rem; margin-bottom: 20px; }
+.contacts { list-style: none; padding: 0; margin: 0 0 28px; display: flex; gap: 24px; flex-wrap: wrap; }
+.contacts a { color: #fff; font-weight: 600; }
+.copyright { color: #9aa3af; font-size: 0.85rem; margin: 0; }
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 768px) {
+  .nav { position: absolute; top: 60px; left: 0; right: 0; flex-direction: column; gap: 0;
+    background: #fff; border-bottom: 1px solid var(--color-line); display: none; }
+  .nav.is-open { display: flex; }
+  .nav a { padding: 14px 20px; border-top: 1px solid var(--color-line); }
+  .nav-toggle { display: block; }
+  .cards--3 { grid-template-columns: 1fr; }
+  .stack-row { grid-template-columns: 100px 1fr; }
+  .hero { padding: 64px 0 56px; }
+  .section { padding: 56px 0; }
+}
