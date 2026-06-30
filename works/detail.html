@@ -60,9 +60,9 @@
         const tags = (w.tags || []).map(function (t) { return esc(t); }).join(" / ");
 
         const links = [];
-        if (w.links && w.links.repo) links.push('<a href="' + esc(w.links.repo) + '">コードを見る</a>');
-        if (w.links && w.links.demo) links.push('<a href="' + esc(w.links.demo) + '">デモを見る</a>');
-        if (w.links && w.links.note) links.push('<a href="' + esc(w.links.note) + '">note記事</a>');
+        if (w.links && w.links.repo) links.push('<a href="' + esc(w.links.repo) + '" target="_blank" rel="noopener">コードを見る</a>');
+        if (w.links && w.links.demo) links.push('<a href="' + esc(w.links.demo) + '" target="_blank" rel="noopener">ライブデモを見る</a>');
+        if (w.links && w.links.note) links.push('<a href="' + esc(w.links.note) + '" target="_blank" rel="noopener">note記事</a>');
 
         body.innerHTML =
           '<span class="badge ' + (w.badge === "公開コード" ? "badge--code" : "badge--result") + '">' + esc(badgeLabel) + "</span>" +
