@@ -3,19 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KIKUCHI Toru — 会計・バックオフィスの"面倒"をAIと自動化で実装まで</title>
-  <meta name="description" content="会計・バックオフィスの面倒を、AIと自動化で実装まで片付けるエンジニア。業務を理解し、自動化・AIで実装し、成果まで。" />
+  <title>KIKUCHI Toru — データで意思決定を支え、必要なら自分で作るデータアナリスト</title>
+  <meta name="description" content="元・情報科教員のデータアナリスト。SQL / Python / BI による分析と、Next.js / Supabase による実装の両輪で、現場課題を数字と仕組みで解決します。" />
 
-  <!-- ===== OGP / Twitter Card ===== -->
+  <!-- ===== OGP ===== -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="KIKUCHI Toru — 会計・バックオフィスの&quot;面倒&quot;をAIと自動化で実装まで" />
-  <meta property="og:description" content="業務を理解 → 自動化・AIで実装 → 成果まで。の3点セットで動けるエンジニアのポートフォリオ。" />
+  <meta property="og:title" content="KIKUCHI Toru — データで意思決定を支え、必要なら自分で作る" />
+  <meta property="og:description" content="分析（SQL / Python / BI）と実装（Next.js / Supabase）の両輪で、現場課題を数字と仕組みで解決するデータアナリストのポートフォリオ。" />
   <meta property="og:url" content="https://chro05.github.io/portfolio-website/" />
   <meta property="og:site_name" content="KIKUCHI Toru Portfolio" />
   <meta property="og:locale" content="ja_JP" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="KIKUCHI Toru — 会計・バックオフィスの&quot;面倒&quot;をAIと自動化で実装まで" />
-  <meta name="twitter:description" content="業務を理解 → 自動化・AIで実装 → 成果まで。の3点セットで動けるエンジニアのポートフォリオ。" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -30,7 +27,7 @@
         <a href="#about">プロフィール</a>
         <a href="#contact">連絡</a>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="メニュー" aria-expanded="false">☰</button>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="メニュー" aria-expanded="false">☰</button>
     </div>
   </header>
 
@@ -39,61 +36,50 @@
     <section class="hero">
       <div class="container">
         <h1 class="hero__title">
-          会計・バックオフィスの&ldquo;面倒&rdquo;を、<br />
-          AIと自動化で&ldquo;実装まで&rdquo;片付けるエンジニア
+          データで意思決定を支え、<br />
+          必要なら自分で作る。
         </h1>
-        <p class="hero__sub">業務を理解 → 自動化・AIで実装 → 成果まで。の3点セットで動けます。</p>
+        <p class="hero__sub">
+          元・情報科教員のデータアナリスト。16年の現場課題を、分析（SQL / Python / BI）と実装（Next.js / Supabase）の両輪で解いてきました。
+        </p>
         <div class="hero__cta">
           <a class="btn btn--primary" href="#works">実績を見る</a>
-          <a class="btn btn--ghost" href="#contact">相談する</a>
+          <a class="btn btn--ghost" href="#contact">連絡する</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== ② こんな"面倒"を解決します ===== -->
-    <section class="section pains">
-      <div class="container">
-        <h2 class="section__title">こんな作業、まだ手でやっていませんか？</h2>
-        <ul class="cards cards--3">
-          <!-- TODO: 実案件でよくある「面倒」に差し替え -->
-          <li class="pain-card"><h3>手作業の集計・転記</h3><p>Excelへの転記やコピペ作業を繰り返している</p></li>
-          <li class="pain-card"><h3>定型レポート作成</h3><p>毎月同じ資料を手で作り直している</p></li>
-          <li class="pain-card"><h3>会計・経理の繰り返し</h3><p>仕訳や計算の定型処理に時間を取られている</p></li>
-        </ul>
-        <p class="pains__lead">→ こうした&ldquo;面倒&rdquo;を、AIと自動化で<strong>「実装まで」</strong>やります。</p>
-      </div>
-    </section>
-
-    <!-- ===== ③ 3つの強み ===== -->
+    <!-- ===== ② 3つの強み ===== -->
     <section class="section strengths">
       <div class="container">
         <h2 class="section__title">3つの強みの&ldquo;重なり&rdquo;が特徴です</h2>
+        <p class="section__lead">数字を集めて終わりにせず、現場が迷わず動ける示唆まで。さらに、それを支えるツールも自分で作れます。</p>
         <ul class="cards cards--3">
           <li class="strength-card">
             <span class="strength-card__no">01</span>
-            <h3>業務ドメインの理解</h3>
-            <p>会計・財務・バックオフィスの実務を理解した上で設計します。</p>
+            <h3>データ分析・可視化</h3>
+            <p>SQLでの集計、Python（MeCab）での形態素解析・機械学習、Looker StudioでのBIダッシュボード制作。定性データを定量化・可視化し、エビデンスベースの意思決定につなげます。</p>
           </li>
           <li class="strength-card">
             <span class="strength-card__no">02</span>
-            <h3>自動化・RPAの実装力</h3>
-            <p>GAS / VBA / スクリプトで地に足のついた効率化を実装します。</p>
+            <h3>課題発見力（現場16年）</h3>
+            <p>特別支援・定時制の教育現場で16年。「どこに問題があるか」を観察で見極め、データで仮説を検証して打ち手につなげます。</p>
           </li>
           <li class="strength-card">
             <span class="strength-card__no">03</span>
-            <h3>AI・LLMを実務に組み込む力</h3>
-            <p>ローカル完結のLLMツールやエージェントを業務に組み込みます。</p>
+            <h3>一気通貫の実装力</h3>
+            <p>要件定義〜フロント〜バックエンド（Supabase / SQL）〜デプロイまで一人で完結。分析を支えるデータ基盤やツールを自分で作れます。</p>
           </li>
         </ul>
-        <p class="strengths__lead">この3つが重なるから、<strong>現場を理解して実装まで持っていけます。</strong></p>
+        <p class="strengths__lead">この3つが重なるから、<strong>現場を理解し、分析から実装まで持っていけます。</strong></p>
       </div>
     </section>
 
-    <!-- ===== ④ 制作実績（JSON駆動） ===== -->
+    <!-- ===== ③ 制作実績（JSON駆動） ===== -->
     <section class="section works" id="works">
       <div class="container">
         <h2 class="section__title">制作実績</h2>
-        <p class="section__lead">「課題 → 対応 → 成果」で、何を解決できるかをお見せします。</p>
+        <p class="section__lead">データ分析からプロダクト開発まで。「課題 → 対応 → 成果」で、何を解決できるかをお見せします。</p>
         <ul class="cards cards--3" id="worksList">
           <!-- assets/js/works.js が data/works.json から生成 -->
           <li class="works-card works-card--loading">読み込み中…</li>
@@ -101,60 +87,55 @@
       </div>
     </section>
 
-    <!-- ===== ⑤ 技術スタック ===== -->
+    <!-- ===== ④ 技術スタック ===== -->
     <section class="section stack" id="stack">
       <div class="container">
         <h2 class="section__title">技術スタック</h2>
         <dl class="stack-list">
-          <div class="stack-row"><dt>言語</dt><dd>Python / JavaScript / GAS / VBA</dd></div>
-          <div class="stack-row"><dt>AI・LLM</dt><dd>ローカル完結LLM / エージェント / API連携</dd></div>
-          <div class="stack-row"><dt>自動化</dt><dd>RPA / スクリプト / スプレッドシート連携</dd></div>
-          <div class="stack-row"><dt>その他</dt><dd>Git / HTML・CSS / GitHub Pages</dd></div>
+          <div class="stack-row"><dt>言語</dt><dd>TypeScript / JavaScript / Python / SQL / Swift</dd></div>
+          <div class="stack-row"><dt>データ・分析</dt><dd>SQL集計 / Python（MeCab）形態素解析・機械学習 / Looker Studio（BI可視化）</dd></div>
+          <div class="stack-row"><dt>フロント / バック</dt><dd>React・Next.js（App Router）/ Tailwind・shadcn/ui / Supabase（PostgreSQL・Auth・RLS）</dd></div>
+          <div class="stack-row"><dt>AI・自動化</dt><dd>Anthropic Claude API / Excel VBA / Google Apps Script</dd></div>
+          <div class="stack-row"><dt>インフラ</dt><dd>Vercel（CI/CD）/ GitHub</dd></div>
         </dl>
       </div>
     </section>
 
-    <!-- ===== ⑥ 依頼の流れ ===== -->
-    <section class="section flow">
-      <div class="container">
-        <h2 class="section__title">依頼の流れ</h2>
-        <ol class="flow-steps">
-          <li>相談</li><li>課題ヒアリング</li><li>試作</li><li>実装</li><li>納品</li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ===== ⑦ note ===== -->
+    <!-- ===== ⑤ note ===== -->
     <section class="section note">
       <div class="container">
         <h2 class="section__title">考え方を発信しています</h2>
-        <!-- TODO: noteのURLに差し替え -->
-        <a class="btn btn--ghost" href="#" data-todo="note-url">noteを読む</a>
+        <a class="btn btn--ghost" href="https://note.com/lush_cosmos4027" target="_blank" rel="noopener">noteを読む</a>
       </div>
     </section>
 
-    <!-- ===== ⑧ プロフィール ===== -->
+    <!-- ===== ⑥ プロフィール ===== -->
     <section class="section about" id="about">
       <div class="container">
         <h2 class="section__title">プロフィール</h2>
-        <!-- TODO: 守秘・個人情報に触れない範囲で記入 -->
         <p class="about__text">
-          会計・バックオフィス領域の業務を理解し、自動化とAIで「実装まで」を担うエンジニアです。
-          現場の&ldquo;面倒&rdquo;を、手を動かして成果につなげることを得意としています。
+          特別支援学校・定時制高校で情報科教員を16年務め、現場の課題を「データと仕組み」で解決してきました。
+          アンケート等の定性データをPython（MeCab）で形態素解析・機械学習にかけて定量化・可視化し、
+          SQLでの集計やLooker StudioでのBIダッシュボード制作まで、データの収集→可視化→考察を一通り実践。
+          校務ではExcel VBA・GASによる自動化で年間約200時間（約40%）の工数削減も実現しました。
+          2026年4月に民間IT企業へ転身し、現在は生成AIを活用したソフトウェア開発に従事。
+          要件定義〜実装〜運用までを一人で完結できる開発力を土台に、これまでのデータ分析経験を活かせる
+          <strong>データアナリスト</strong>を志望しています。
         </p>
       </div>
     </section>
   </main>
 
-  <!-- ===== ⑨ 連絡導線（フッタ） ===== -->
+  <!-- ===== ⑦ 連絡導線（フッタ） ===== -->
   <footer class="site-footer" id="contact">
     <div class="container">
-      <h2 class="footer__title">お問い合わせは各SNSから</h2>
+      <h2 class="footer__title">お問い合わせ</h2>
       <ul class="contacts">
-        <!-- TODO: 各URLに差し替え -->
-        <li><a href="#" data-todo="x-url">X (Twitter)</a></li>
-        <li><a href="https://github.com/ChRo05">GitHub</a></li>
-        <li><a href="#" data-todo="note-url">note</a></li>
+        <li><a href="https://forms.gle/LL4WyZ3bWAvPhe8CA" target="_blank" rel="noopener">お問い合わせフォーム</a></li>
+        <li><a href="https://www.linkedin.com/in/kikuchi-toru-buildships/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/TK20260401" target="_blank" rel="noopener">GitHub（プロダクト）</a></li>
+        <li><a href="https://github.com/ChRo05" target="_blank" rel="noopener">GitHub（学習履歴）</a></li>
+        <li><a href="https://note.com/lush_cosmos4027" target="_blank" rel="noopener">note</a></li>
       </ul>
       <p class="copyright">&copy; KIKUCHI Toru</p>
     </div>
